@@ -40,6 +40,12 @@ jobs:
     runs-on: self-hosted-runner-tester
     if:  ${{ inputs.print_tags }} 
     steps:
+      - name: Print the log_level
+        run: echo  The log_level is ${{ inputs.log_level }}
+
       - name: Print the input tag to STDOUT
-        run: echo  The tags are ${{ inputs.tags }} 
+        run: echo  The tags are ${{ inputs.tags }}
+
+      - name: Print the environment
+        run: echo  The environment is ${{ inputs.environment }}
        
